@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 import { motion } from "motion/react"
 import { AppContext } from '../context/AppContext'
 import { useNavigate } from 'react-router-dom'
+import { Button, LayoutTextFlip } from './ui/layout-text'
 
 const Header = () => {
   const { user , setShowLogin} = useContext(AppContext)
@@ -18,12 +19,13 @@ const Header = () => {
 
   }
   return (
-    <motion.div className='flex flex-col justify-center items-center text-center my-20'
+    <motion.div className='flex flex-col justify-center items-center text-center my-20 relative mx-2 my-2  gap-4 sm:mx-0 sm:mb-0  '
     initial= {{opacity:0.2, y:100}}
     transition={{duration:1}}
     whileInView={{opacity:1, y:0}}
     viewport={{once: true}}
     >
+
 
      <motion.div  className='flex items-center  sm:text-sm font-medium bg-blue-100 sm:px-5 py-1 rounded-full border border-gray-400  gap-2 '
      initial= {{opacity:0, y:-20}}
@@ -31,25 +33,41 @@ const Header = () => {
     animate={{opacity:1, y:0}}
    
      >
-      <p>Tis is our website for ai image generator</p>
+      <p>This is our website for ai image generator</p>
       <img src={assets.star_icon} alt="" />
+      
+
+
      </motion.div>
 
 
-     <motion.h1 className='text-4xl max-w-[300px] sm:text-7xl sm:max-w-[590px] mx-auto mt-10 text-center' ><span className='text-pink-700'>T</span>urn text to generate <span className='text-pink-700' >image </span> in seconds.</motion.h1>
+     <motion.h1 className='text-4xl max-w-[300px] sm:text-7xl sm:max-w-[590px] mx-auto mt-10 text-center ' >
+      <LayoutTextFlip
+      text= " This Ai present By   "
+      words= {["Aakash sharma", "Abhay-05", "Abhay-06", "Dipti-mam"]}
+      />
+       text to generate <span className='text-pink-500' >image </span> in seconds.</motion.h1>
 
 
      <p className='text-center max-w-xl mx-auto mt-5'>Unleash Your creativity with AI. Turn your imagination into visual in a seconds - Just type, and watch magic happen </p>
 
      <motion.button onClick={ onClickHandler}
-      className='sm:text-lg text-white hover:scale-105 transition-all px-7  py-2 mt-10 mx- flex items-center  cursor-pointer bg-black border border-black rounded-full '
-     whileHover={{scale:1.05}}
-     whileTap={{scale:0.95}}
-     initial={{opacity:0}}
-     animate={{opacity:1}}
-     transition={{default: {duration:0.5} , opacity:{delay:0.8, duration:1}}}
-     >Generate Image 
+    //   className='sm:text-lg text-white hover:scale-105 transition-all px-7  py-2 mt-10 mx- flex items-center  cursor-pointer bg-black border border-black rounded-full '
+    //  whileHover={{scale:1.05}}
+    //  whileTap={{scale:0.95}}
+    //  initial={{opacity:0}}
+    //  animate={{opacity:1}}
+    //  transition={{default: {duration:0.5} , opacity:{delay:0.8, duration:1}}}
+    >
+      <Button
+       borderRadius="2.75rem"
+        className="bg-teal-600 dark:bg-slate-300  dark:text-black border-neutral-800 dark:border-slate-200"
+      >Generate image
+
       <img  className='w-7 mx-3' src={assets.star_group} alt="" />
+      </Button>
+      
+      
      </motion.button>
 
 
