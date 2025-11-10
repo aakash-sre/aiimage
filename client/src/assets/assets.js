@@ -77,21 +77,21 @@ export const testimonialsData = [
         name:'Aakash sre',
         role:'UI/UX Designer',
         stars:4,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        text:`I've been using AI for nearly two years, primarily for Project, and it has been incredibly user-friendly, making my work much easier.`
     },
     {
         image:abhay2_img,
         name:'Abhay yadav',
         role:' Creator',
         stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        text:`I'am work at AI tools  for nearly One years,  and it has been incredibly users, making my work much easier.`
     },
     {
         image:abhay1_img,
         name:'Abhay',
         role:'page Designer',
         stars:3,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        text:`I've been using bg.removal for nearly One years, and it has been incredibly user-friendly.`
     },
 ]
 

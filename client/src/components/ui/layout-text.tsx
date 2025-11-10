@@ -36,7 +36,7 @@ export const LayoutTextFlip = ({
 
     <motion.span
     layout
-    className="relative w-fit overflow-hidden rounded-md border border-transparent bg-white px-4 py-2 font-sans text-2xl font-bold tracking-tight text-black shadow-sm ring shadow-black/ ring-black/10 drop-shadow-lg md:text-4xl dark:bg-neutral-900 dark:text-white dark:shadow-sm dark:ring-1 dark:shadow-white/10 dark:ring-white/10">
+    className="relative w-fit overflow-hidden rounded-md border border-transparent bg-black px-6 py-1 font-sans text-2xl font-semibold tracking-tight text-white shadow-sm ring shadow-black/10 ring-blue/10 drop-shadow-lg md:text-4xl dark:bg-neutral-900 dark:text-white dark:shadow-sm dark:ring-1 dark:shadow-white/10 dark:ring-white/10 ">
       <AnimatePresence mode="popLayout" >
         <motion.span key={currentIndex} initial={{ y:-40 , filter: "blur(1px)"}} animate= {{y:0,filter:"blur(px)",}}
         exit={{y:50, filter:"blur(0.5px)", opacity:0 }}
@@ -75,7 +75,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "relative h-16 w-40 overflow-hidden bg-transparent p-[10px] text-xl",
+        "relative h-16 w-40 overflow-hidden bg-transparent p-[5px] text-2xl",
         containerClassName,
       )}
       style={{
@@ -90,7 +90,7 @@ export function Button({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 bg-[radial-gradient(#ff1493_40%,transparent_90%)] opacity-[0.8]",
+              "h-20 w-20 bg-[radial-gradient(#00ffff_40%,transparent_80%)] opacity-[0.8]",
               borderClassName,
             )}
           />

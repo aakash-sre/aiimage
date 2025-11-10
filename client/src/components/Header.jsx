@@ -41,27 +41,19 @@ const Header = () => {
      </motion.div>
 
 
-     <motion.h1 className='text-4xl max-w-[300px] sm:text-7xl sm:max-w-[590px] mx-auto mt-10 text-center ' >
-      <LayoutTextFlip
+     <motion.h1 className='text-4xl max-w-[300px] sm:text-4xl sm:max-w-[590px] mx-auto mt-10 text-center font-semibold  ' >
+      <LayoutTextFlip 
       text= " This Ai present By   "
-      words= {["Aakash sharma", "Abhay-05", "Abhay-06", "Dipti-mam"]}
-      />
-       text to generate <span className='text-pink-500' >image </span> in seconds.</motion.h1>
+      words= {["Aakash sre", "Abhay-005", "Abhay-006", "Dipti-mam"]}/>
+       text to Generate <span className='text-pink-500' >Image </span> in Seconds.</motion.h1>
 
 
      <p className='text-center max-w-xl mx-auto mt-5'>Unleash Your creativity with AI. Turn your imagination into visual in a seconds - Just type, and watch magic happen </p>
 
-     <motion.button onClick={ onClickHandler}
-    //   className='sm:text-lg text-white hover:scale-105 transition-all px-7  py-2 mt-10 mx- flex items-center  cursor-pointer bg-black border border-black rounded-full '
-    //  whileHover={{scale:1.05}}
-    //  whileTap={{scale:0.95}}
-    //  initial={{opacity:0}}
-    //  animate={{opacity:1}}
-    //  transition={{default: {duration:0.5} , opacity:{delay:0.8, duration:1}}}
-    >
+     <motion.button onClick={ onClickHandler} >
       <Button
        borderRadius="2.75rem"
-        className="bg-teal-600 dark:bg-slate-300  dark:text-black border-neutral-800 dark:border-slate-200"
+        className="bg-teal-600 dark:bg-slate-300  dark:text-black border-neutral-800 dark:border-slate-200 hover:scale-105 transition-all"
       >Generate image
 
       <img  className='w-7 mx-3' src={assets.star_group} alt="" />

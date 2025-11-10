@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { assets, plans } from '../assets/assets'
 import { AppContext } from '../context/AppContext'
 import { motion } from "motion/react"
+import { Button } from '../components/ui/layout-text'
 
 
 const BuyCredit = () => {
@@ -17,9 +18,11 @@ const BuyCredit = () => {
     whileInView={{opacity:1, y:0}}
     viewport={{once: true}}
      className='flex flex-col items-center justify-center'>
-    <button className='border border-gray-400 text-black px-7 py-1 sm:px-10 text-sm rounded-full mb-10'>
-      Our Plans
-    </button>
+
+      <Button>Plans Here</Button>
+    
+
+
     <motion.h1 
     initial= {{opacity:0.2, y:100}}
     transition={{duration:1}}
