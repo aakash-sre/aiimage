@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { Routes,Route } from 'react-router-dom'
+import React, { useContext, useEffect } from 'react'
+import { Routes,Route, useLocation } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,6 +17,14 @@ import { AppContext } from './context/AppContext'
 const App = () => {
 
   const {showLogin } = useContext(AppContext)
+  const location  = useLocation();
+
+
+  useEffect(()=>{
+    const sound = new Audio("/newsound.mp3");
+    sound.play();
+
+  },[location.pathname]);
 
 
   return ( 
@@ -36,4 +44,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
