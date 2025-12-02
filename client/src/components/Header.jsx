@@ -27,13 +27,13 @@ const Header = () => {
     >
 
 
-     <motion.div  className='flex items-center  sm:text-sm font-medium bg-blue-100 sm:px-5 py-1 rounded-full border border-gray-400  gap-2 '
+     <motion.div  className='flex items-center  sm:text-sm font-medium bg-transparent-100 sm:px-5 py-1 rounded-full border border-gray-400 gap-2   '
      initial= {{opacity:0, y:-20}}
     transition={{delay:0.2, duration:0.8}}
     animate={{opacity:1, y:0}}
    
      >
-      <p>This is our website for ai image generator</p>
+      <p className='text-yellow-700'>THIS IS OUR WEBSITE</p>
       <img src={assets.star_icon} alt="" />
       
 
@@ -41,20 +41,21 @@ const Header = () => {
      </motion.div>
 
 
-     <motion.h1 className='text-4xl max-w-[300px] sm:text-4xl sm:max-w-[590px] mx-auto mt-10 text-center font-semibold  ' >
+     <motion.h1 className='text-4xl max-w-[300px] sm:text-4xl sm:max-w-[590px] mx-auto mt-10 text-center font-semibold  text-white ' >
       <LayoutTextFlip 
       text= " This Ai present By   "
       words= {["Aakash sre", "Abhay-005", "Abhay-006", "Dipti-mam"]}/>
-       text to Generate <span className='text-pink-500' >Image </span> in Seconds.</motion.h1>
+      <span className='text-yellow-600 px-5  py-5' >Image </span> in Seconds.</motion.h1>
 
 
-     <p className='text-center max-w-xl mx-auto mt-5'>Unleash Your creativity with AI. Turn your imagination into visual in a seconds - Just type, and watch magic happen </p>
+     <p className='text-center max-w-xl mx-auto mt-5 text-gray-500'>Unleash Your creativity with AI. Turn your imagination into visual in a seconds - Just type, and watch magic happen </p>
 
      <motion.button onClick={ onClickHandler} >
       <Button
-       borderRadius="2.75rem"
-        className="bg-teal-600 dark:bg-slate-300  dark:text-black border-neutral-800 dark:border-slate-200 hover:scale-105 transition-all"
-      >Generate image
+       borderRadius="1.75rem"
+        className="bg-yellow-600 dark:bg-slate-300 dark:text-black border-neutral-900 dark:border-slate-200 hover:scale-105 transition-all text-black"
+      >GENERATE IMG
+      
 
       <img  className='w-7 mx-3' src={assets.star_group} alt="" />
       </Button>

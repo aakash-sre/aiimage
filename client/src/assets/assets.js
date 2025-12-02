@@ -27,6 +27,8 @@ import zebra_icon from './zebra_icon.png'
 import aakash_icon from './aakash_icon.jpg'
 import abhay1_img from  './abhay1_img.jpg'
 import abhay2_img from './abhay2_img.jpg'
+import qr_code from './qr_code.png'
+
 
 export const assets = {
     logo,
@@ -49,7 +51,8 @@ export const assets = {
     robotbird_icon,
     jwala_icon,
     boy_icon,
-    zebra_icon
+    zebra_icon,
+    qr_code
 
 }
 
@@ -75,7 +78,7 @@ export const testimonialsData = [
     {
         image:aakash_icon,
         name:'Aakash sre',
-        role:'UI/UX Designer',
+        role:'UI/UX Designer and web-Developer ',
         stars:4,
         text:`I've been using AI for nearly two years, primarily for Project, and it has been incredibly user-friendly, making my work much easier.`
     },

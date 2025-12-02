@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import {assets} from '../assets/assets'
 import { Link, useNavigate } from 'react-router-dom'
 import { AppContext } from '../context/AppContext'
+// import {  testimonialsData } from '../assets/assets'
 
 
 const Navbar = () => {
@@ -9,6 +10,9 @@ const Navbar = () => {
  const {user ,setShowLogin,logout,credit} = useContext(AppContext)
   
   const navigate  = useNavigate() 
+  const [menu, setMenu] = useState("home")
+
+  
   
   
 
@@ -44,6 +48,21 @@ const Navbar = () => {
             <p onClick={()=>navigate('/buy')}className='bg-zinc-900 text-white px-7 py-2 sm:px-10 text-sm rounded-full'>Pricing</p>
 
             <button onClick={()=>setShowLogin(true)} className='bg-zinc-900 text-white px-7 py-2 sm:px-10 text-sm rounded-full'>Login</button>
+
+            <a href="Testimonials" onClick={()=>setMenu("about")} className={menu==="menu"? "active":"text-white bg-yellow-500 rounded-md w-20 h-8 px-5"}   >about</a>
+            {/* <div className='flex flex-wrap  mb-10 mt-10 gap-6'>
+              {testimonialsData.map((testomonial,index)=>(
+                <div key={index} className='bg-white/20 p-12 rounded-lg shadow-md border w-80 m-auto cursor-pointer hover:scale-[1.02] transition-all' >
+                 <div>
+                  <img src={testomonial.image} alt="" className='rounded-full w-14' />
+                 </div>
+                  
+                </div>
+
+              ))}
+
+            </div> */}
+            
            </div>
         }
 

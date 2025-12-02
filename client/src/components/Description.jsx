@@ -1,7 +1,8 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { motion } from "motion/react"
-
+import { BackgroundGradient } from './ui/layout-text'
+// import {IconAppWindow} from "..tabler/icons-react"
 const Description = () => {
   return (
     <motion.div 
@@ -14,7 +15,10 @@ const Description = () => {
       <p className='text-gray-500'>Turn Your  Imagination into visuals</p>
 
       <div className='flex flex-col mt-10 gap-4 md:gap-14 md:flex-row items-center'>
-        <img src={assets.girl_icon} alt="" className='w-80 xl:w-96 rounded-lg' />
+        <BackgroundGradient className='rounded-[22px] max-w-sm p-4 sm:p-10 bg- dark:bg-black'>
+        <img src={assets.girl_icon} height="400" width="400" alt="jordans" className='object-contain rounded-2xl' />
+
+        </BackgroundGradient>
         <div>
 
       <h2 className='text-3xl font-medium max-w-lg mb-4'>Introducing the AI-Powered Text to image Generator</h2>

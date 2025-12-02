@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect,  useRef,  useState } from "react";
-import { AnimatePresence, useAnimationFrame, useMotionTemplate, useMotionValue, useTransform ,motion } from "motion/react";
+import { AnimatePresence, useAnimationFrame, useMotionTemplate, useMotionValue, useTransform ,motion,  } from "motion/react";
 // import { useRef } from "react";
 import {cn} from "../lib/utils.ts"
+
 
 
 
@@ -180,3 +181,49 @@ export const MovingBorder = ({
     </>
   );
 };
+
+export const BackgroundGradient = ({
+  children, className,containerClassName,animate = true,
+   }:{
+    children ?: React.ReactNode;
+    className?: string;
+    animate?:boolean;
+    containerClassName?:string;
+  }) => {
+    const variants = {
+      initial:{
+        backgroundPosition:"0 50%",},
+        animate:{
+          backgroundPosition:["0,50%","100% 50%"  , "0 50%"],
+        },
+    };
+
+  
+
+  return (
+
+    <div className={cn("relative p-[4px] group",containerClassName)}>
+      < motion.div
+      variants={animate ? variants:undefined}
+      initial={animate ? 'initial':undefined}
+      animate={animate ? "animate":undefined}
+      transition={
+        animate ? {
+          duration:5,
+          repeat:Infinity,repeatType:"reverse", } :undefined }
+          style={{
+          backgroundSize: animate ? "400% 400%" : undefined,
+        }}
+        className={cn(
+          "absolute inset-0 rounded-2xl z-[1] opacity-60 group-hover:opacity-100 blur will-change-transform",
+          "bg-[radial-gradient(circle_farthest-side_at_100%_100%,#000000,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#141316,#800080),radial-gradient(circle_farthest-side_at_100%_100%,#28a745,transparent),radial-gradient(circle_farthest-side_at_100%_100%,#4169e1,#f5f5dc)]"
+        )}
+      />
+      <div className={cn("relative z-10 " , className)}>
+        {children}
+
+      </div>
+
+    </div>
+  )
+}
