@@ -11,7 +11,7 @@ const Description = () => {
     whileInView={{opacity:1, y:0}}
     viewport={{once: true}}
     className='flex flex-col items-center justify-center my-24 p-6 md:px-28'>
-      <h1 className='text-3xl sm:text-4xl '><b>Create AI Images</b> </h1>
+      <h1 className='text-3xl text-white sm:text-4xl '><b>Create AI Images</b> </h1>
       <p className='text-gray-500'>Turn Your  Imagination into visuals</p>
 
       <div className='flex flex-col mt-10 gap-4 md:gap-14 md:flex-row items-center'>

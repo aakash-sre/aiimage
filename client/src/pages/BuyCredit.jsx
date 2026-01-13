@@ -28,7 +28,7 @@ const BuyCredit = () => {
     transition={{duration:1}}
     whileInView={{opacity:1, y:0}}
     viewport={{once: true}}
-    className='text-3xl font-semibold sm:mb-10 mb-6 '>Choose the Plans</motion.h1>
+    className='text-3xl text-white font-semibold sm:mb-10 mb-6 '>Choose the Plans</motion.h1>
      </motion.div>
 
 

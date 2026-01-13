@@ -37,10 +37,13 @@ const Navbar = () => {
               <img src={assets.profile_icon} className='w-10 drop-shadow' alt="" />
               <div className='absolute hidden group-hover:block top-0  right-0   z-0  text-black rounded pt-12 cursor-pointer'  >
                 <ul className=' list-none m-2  bg-white rounded-md gap-5 border text-sm'>
-                  <li onClick={logout} className='px-2 py-1 cursor-pointer ' >Logout</li>
+                  <li onClick={logout} className='px-2 py-1 cursor-pointer ' >LogOut</li>
                 </ul>
-
+               
               </div>
+              <p className='text-gray-700 text-1xl '>
+                <star></star>
+                sign logOut then login</p>
             </div>
           </div>
          :
