@@ -25,8 +25,8 @@ import robotbird_icon from './robotbird_icon.png'
 import boy_icon from './boy_icon.png'
 import zebra_icon from './zebra_icon.png'
 import aakash_icon from './aakash_icon.jpg'
-import abhay1_img from  './abhay1_img.jpg'
-import abhay2_img from './abhay2_img.jpg'
+// import abhay1_img from  './abhay1_img.jpg'
+// import abhay2_img from './abhay2_img.jpg'
 import qr_code from './qr_code.png'
 
 
